@@ -1,0 +1,30 @@
+version: '3.5'
+services:
+  postgres:
+    container_name: django-postgres
+    image: postgres:alpine
+    expose:
+      - 5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=tembus
+
+  web:
+    container_name: django-web
+    build: .
+    command: "bash -c 'python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000'"
+    restart: on-failure:10
+    volumes:
+      - ./src:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./src/.env
+    depends_on:
+      - "postgres"
+
+volumes:
+  db-data:
