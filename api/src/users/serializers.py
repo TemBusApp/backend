@@ -46,17 +46,17 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class ProfileUserSerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField()
-    descriptions = serializers.SerializerMethodField()
+    #descriptions = serializers.SerializerMethodField()
     class Meta:
         model = User
         fields = [
-            'id', 'name', 'descriptions',
+            'id', 'name',
         ]
 
     def get_descriptions(self, obj):
-        ds = Description.objects.filter(user=obj)
-        serializer = CreateDescriptionSerializer(ds, many=True)
-        return serializer.data
+        #ds = Description.objects.filter(user=obj)
+        #serializer = CreateDescriptionSerializer(ds, many=True)
+        return
 
     def get_name(self, obj):
         return "{} {}".format(obj.first_name, obj.last_name)
