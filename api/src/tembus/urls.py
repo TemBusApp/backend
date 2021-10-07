@@ -33,5 +33,6 @@ urlpatterns = [
         description="",
         version="0.0.0"
     ), name='openapi-schema'),
-    path('api/users/', include(users_urls), name='users_api')
+    path('api/users/', include(users_urls), name='users_api'),
+    path('api/login/', obtain_jwt_token, name='login')
 ]
