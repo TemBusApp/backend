@@ -5,8 +5,6 @@ from rest_framework import status
 from rest_framework.test import APIClient
 from django.contrib.auth import get_user_model
 
-from descriptions.tests import TestDescriptions
-
 User = get_user_model()
 
 
@@ -35,7 +33,7 @@ class RegisterUserTests(TestCase):
 
     check_fields = ['username', 'email', 'first_name', 'last_name', 'phone']
     profile = reverse('profile')
-    route = '/api/register/'
+    route = '/api/users/register/'
     login = '/api/login/'
 
     def setUp(self):
@@ -133,4 +131,4 @@ class RegisterUserTests(TestCase):
         with self.subTest('Authentication credentials must be provided', response=response):
             self.assertEqual(response.status_code, status.HTTP_200_OK)
             self.assertIn('name', response.json())
-            self.assertIn('descriptions', response.json())
+            #self.assertIn('descriptions', response.json())
