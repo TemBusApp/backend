@@ -2,3 +2,5 @@ Django>=3.2.8
 djangorestframework>=3.12.4
 python-decouple>=3.5
 djangorestframework-jwt>=1.11.0
+pyyaml
+uritemplate
