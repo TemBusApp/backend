@@ -2,6 +2,8 @@ from rest_framework import generics, status, permissions
 from rest_framework.response import Response
 from users.serializers import RegisterSerializer, ProfileUserSerializer
 
+from django.utils.translation import ugettext as _
+
 
 class RegisterAPIView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
@@ -19,7 +21,7 @@ class WelcomeView(generics.GenericAPIView):
 	permission_classes = (permissions.AllowAny, )
 
 	def get(self,request,*args,**kwargs):
-		return Response({'hello':'world'})
+		return Response({'status':_('StatusMsg')})
 
 register = RegisterAPIView.as_view()
 hello = WelcomeView.as_view()

@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-09 09:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: users/admin.py:10
+msgid "Personal info"
+msgstr "Informação Pessoal"
+
+#: users/admin.py:11
+msgid "Permissions"
+msgstr "Permissões"
+
+#: users/admin.py:14
+msgid "Important dates"
+msgstr "Datas importantes"
+
+#: users/models.py:7
+msgid "phone number"
+msgstr "Número de Telefone"
+
+#: users/views.py:24
+msgid "StatusMsg"
+msgstr "Tudo ok!"
