@@ -1,9 +1,11 @@
 
 from pathlib import Path
+from unipath import Path as Path2
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = Path2(__file__).parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -131,6 +133,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES = (
+    ('en', u'English'),
+    ('pt-br', u'Português'),
+)
+
+LOCALE_PATHS = (PROJECT_DIR.child('locale'),)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

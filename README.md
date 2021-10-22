@@ -1,5 +1,6 @@
 <!-- <p align="center"><img src="#" alt="TemBusApp"></p> -->
 <img src="https://img.shields.io/github/languages/code-size/TemBusApp/backend?label=Repo%20size" height="20">
+<img src="https://img.shields.io/github/license/TemBusApp/backend?style=flat-square" height="20">
 
 # Description
 
